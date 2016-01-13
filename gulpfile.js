@@ -5,6 +5,11 @@ Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 
 var gulp = require('gulp');
 
+var paths = {
+    target : '/app/dist/'
+};
+
+
 gulp.task('default', function () {
     // place code for your default task here
 });
