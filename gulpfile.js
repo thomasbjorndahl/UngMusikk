@@ -97,7 +97,7 @@ gulp.task('jquery', function () {
         .pipe(gulp.dest(paths.target.scripts + 'jquery/'));
 });
 gulp.task('angular', ['angular:clean'], function () {
-    return gulp.src(paths.source.node_modules + 'angular/angular.min.js')
+    return gulp.src([paths.source.node_modules + 'angular/angular.js', paths.source.node_modules + 'angular-route/angular-route.js'])
         .pipe(debug())
         .pipe(gulp.dest(paths.target.scripts + 'angular/'))
 });
@@ -105,4 +105,12 @@ gulp.task('angular:clean', function () {
     return gulp.src(paths.target.scripts + 'angular/*.*')
         .pipe(rimraf());
 });
-gulp.task('full-build', ['compile', 'images','libraries']);
+gulp.task('full-build', ['compile', 'images', 'libraries']);
+
+
+//File watchers
+gulp.task('watch', function () {
+    gulp.watch(paths.source.scripts, ['scripts']);
+    gulp.watch(paths.source.css + '*.less', ['styles']);
+    gulp.watch(paths.source.html + '*.html', ['html']);
+})

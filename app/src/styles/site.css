@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  background-image: url('../img/Saxophone.jpg');
+  color: white;
+}
+.commentText {
+  color: #cccccc;
+  font-size: smaller;
+}
+.italic {
+  font-style: italic;
+}
+.panel-transparent {
+  background: none;
+}
+.panel-transparent .panel-heading {
+  background: rgba(156, 156, 156, 0.5) !important;
+}
+.panel-transparent .panel-body {
+  background: rgba(156, 156, 156, 0.5) !important;
+}

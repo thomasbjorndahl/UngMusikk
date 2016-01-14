@@ -6,6 +6,6 @@
  ********************/
 (function () {
     'use strict';
-    angular.module('um', []);
+    angular.module('um',['ngRoute']);
 
 })();
