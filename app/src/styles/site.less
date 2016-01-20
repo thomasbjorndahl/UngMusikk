@@ -1,0 +1,31 @@
+﻿@backgroundColor: black;
+@textColor: white;
+@lightTextColor : darken(@textColor, 10%);
+@transparency : 0.5;
+
+body {
+    background-color: @backgroundColor;
+    background-image: url('../img/Saxophone.jpg');
+    color: @textColor;
+}
+
+.commentText {
+    color: darken(@textColor, 20%);
+    font-size: smaller;
+}
+
+.italic {
+    font-style:italic;
+}
+
+.panel-transparent {
+    background: none;
+
+    .panel-heading{
+        background: rgba(156, 156, 156, @transparency )!important;
+    }
+    .panel-body{
+        background: rgba(156, 156, 156, @transparency )!important;
+    }
+}
+
