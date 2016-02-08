@@ -1,0 +1,16 @@
+<div class="panel panel-transparent">
+    <div class="panel-heading">
+        <h1>Ung Musikk Kongsberg</h1>
+    </div>
+</div>
+
+<div ng-repeat="news in vm.news" class="panel panel-transparent">
+    <div class="panel-heading">
+        <h3 ng-bind="news.heading"></h3>
+        <div class="byline" ng-bind="news.date | date: 'dd.MM.yyyy'"></div>
+    </div>
+    <div class="panel-body">
+        <p ng-repeat="para in news.paragraphs" ng-bind="para"></p>
+    </div>
+</div>
+
