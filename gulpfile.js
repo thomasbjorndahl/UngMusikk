@@ -39,6 +39,7 @@ gulp.task('scripts:clean', function () {
 
 gulp.task('scripts:min', ['scripts:clean'], function () {
     return gulp.src(paths.source.scripts)
+        .pipe(debug())
         .pipe(uglify())
         .pipe(debug())
         .pipe(rename({ extname: '.min.js' }))

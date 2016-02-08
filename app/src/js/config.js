@@ -9,7 +9,8 @@
         $routeProvider
             .when('/', {
                 templateUrl: 'firstPage.html',
-                controller: 'newsController'
+                controller: 'newsController',
+                controllerAs: 'vm'
 
             })
             .when('/KongsbergStorband', {
